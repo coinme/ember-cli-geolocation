@@ -1,4 +1,4 @@
-export function initialize(container, application) {
+export function initialize(application) {
     application.inject('route', 'geolocation', 'service:geolocation');
     application.inject('controller', 'geolocation', 'service:geolocation');
     application.inject('view', 'geolocation', 'service:geolocation');
