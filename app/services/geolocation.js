@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Object.extend(Ember.Evented, {
+export default Ember.Service.extend(Ember.Evented, {
 
     /**
       @private
@@ -85,7 +85,7 @@ export default Ember.Object.extend(Ember.Evented, {
     /**
       Begin periodically inquire `geoPosition` object to retrieve an
       information about current geolocation.
-      
+
       @method start
     */
     start: function() {
@@ -95,7 +95,7 @@ export default Ember.Object.extend(Ember.Evented, {
 
     /**
       Stop periodically inquire `geoPosition` object.
-      
+
       @method start
     */
     stop: function() {
@@ -107,7 +107,7 @@ export default Ember.Object.extend(Ember.Evented, {
 
     /**
       Stop and start.
-      
+
       @method restart
     */
     restart: function() {
@@ -116,7 +116,7 @@ export default Ember.Object.extend(Ember.Evented, {
 
     /**
       Returns current geoposition.
-      
+
       @method getGeoposition
       @return {Ember.RSVP.Promise}
     */
@@ -130,7 +130,7 @@ export default Ember.Object.extend(Ember.Evented, {
 
     /**
       Method envoke every `this.interval` time.
-      
+
       @method start
     */
     tick: function() {
